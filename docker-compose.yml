@@ -1,0 +1,10 @@
+services:
+  shop:
+    build: .
+    container_name: tai-nguyen-mmo-bot
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
